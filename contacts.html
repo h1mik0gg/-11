@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты школы №11, обратная связь и FAQ">
+    <title>Контакты - Школа №11</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <nav class="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li>Контакты</li>
+        </ol>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1 style="margin-bottom: 32px;">Контакты</h1>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
+                <!-- Контакты -->
+                <section class="card">
+                    <h2 style="margin-bottom: 24px;">Контакты школы №11</h2>
+                    <div style="display: grid; gap: 16px;">
+                        <div>
+                            <div class="text-muted text-sm">Адрес</div>
+                            <div style="font-weight: 500;">г. Оренбург, Ул. Авиационная 8/3</div>
+                        </div>
+                        <div>
+                            <div class="text-muted text-sm">Телефон</div>
+                            <div style="font-weight: 500;"><a href="tel:+73532442437">+7 (3532) 44-24-37</a></div>
+                        </div>
+                        <div>
+                            <div class="text-muted text-sm">Email</div>
+                            <div style="font-weight: 500;"><a href="mailto:11@orenschool.ru">11@orenschool.ru</a></div>
+                        </div>
+                        <div>
+                            <div class="text-muted text-sm">Часы работы</div>
+                            <div style="font-weight: 500;">Пн-Сб: 08:00 - 20:00</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+                        <a href="https://t.me/orenschool11" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            Telegram
+                        </a>
+                        <a href="https://vk.com/public215405735" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            VK
+                        </a>
+                        <a href="https://ok.ru/group/70000000964579" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            Одноклассники
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Обратная связь -->
+                <section class="card">
+                    <h2 style="margin-bottom: 24px;">Обратная связь</h2>
+                    <form id="feedback-form" style="display: grid; gap: 16px;">
+                        <div>
+                            <label class="label label-required">Тема</label>
+                            <select class="select" id="feedback-topic" required>
+                                <option value="">Выберите тему</option>
+                                <option value="Вопрос">Вопрос</option>
+                                <option value="Проблема">Проблема</option>
+                                <option value="Предложение">Предложение</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label label-required">Сообщение</label>
+                            <textarea class="textarea" id="feedback-message" required minlength="10"></textarea>
+                        </div>
+                        <div>
+                            <label class="label label-required">Контакт для ответа</label>
+                            <input type="text" class="input" id="feedback-contact" placeholder="Email или телефон" required>
+                        </div>
+                        <div>
+                            <p class="text-muted" style="margin-bottom: 0;">
+                                Сообщение будет отправлено в Telegram бот школы. Мы ответим вам в ближайшее время.
+                            </p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </section>
+
+                <!-- FAQ -->
+                <section class="card">
+                    <h2 style="margin-bottom: 24px;">Часто задаваемые вопросы</h2>
+                    <div id="faq-container">
+                        <!-- Заполняется через JS -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="auth-modal-container"></div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/pages/contacts.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Science (chess + lab)">
+  
+<g>
+  <!-- Base pedestal -->
+  <rect x="14" y="52" width="36" height="8" rx="4" fill="#FF7A00"/>
+  <!-- Rook body -->
+  <rect x="18" y="18" width="28" height="34" rx="7" fill="#FF7A00"/>
+  <!-- Crenellations -->
+  <rect x="18" y="10" width="8" height="10" rx="4" fill="#FF7A00"/>
+  <rect x="28" y="8" width="8" height="12" rx="4" fill="#FF7A00"/>
+  <rect x="38" y="10" width="8" height="10" rx="4" fill="#FF7A00"/>
+  <!-- Beaker (science detail) -->
+  <path fill="#FFB36B" d="
+    M 31 22
+    H 33
+    C 33 27, 35.5 30, 37 33
+    C 39 36, 40 39, 40 43
+    C 40 47, 37 50, 32 50
+    C 27 50, 24 47, 24 43
+    C 24 39, 25 36, 27 33
+    C 28.5 30, 31 27, 31 22 Z"/>
+  <path fill="#FF7A00" opacity="0.25" d="
+    M 26 41
+    C 28 43, 30 44, 32 44
+    C 34 44, 36 43, 38 41
+    C 38 45, 35.8 47.5, 32 47.5
+    C 28.2 47.5, 26 45, 26 41 Z"/>
+  <!-- Bubbles -->
+  <circle cx="40" cy="24" r="2.5" fill="#FFB36B" opacity="0.95"/>
+  <circle cx="44" cy="20" r="1.7" fill="#FFB36B" opacity="0.9"/>
+</g>
+
+</svg>

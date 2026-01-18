@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sport (football + basketball)">
+  
+<g>
+  <circle cx="24" cy="38" r="18" fill="#FF7A00"/>
+  <path d="M 37.79 26.43 A 18.00 18.00 0 0 1 37.79 49.57 L 34.72 47.00 A 14.00 14.00 0 0 0 34.72 29.00 Z" fill="#FFB36B" opacity="0.9"/>
+  <path d="M 22.43 55.93 A 18.00 18.00 0 0 1 6.61 42.66 L 10.48 41.62 A 14.00 14.00 0 0 0 22.78 51.95 Z" fill="#FFB36B" opacity="0.9"/>
+  <path d="M 7.69 30.39 A 18.00 18.00 0 0 1 25.57 20.07 L 25.22 24.05 A 14.00 14.00 0 0 0 11.31 32.08 Z" fill="#FFB36B" opacity="0.9"/>
+  <polygon points="24.00,31.50 30.18,35.99 27.82,43.26 20.18,43.26 17.82,35.99" fill="#FFB36B"/>
+  <!-- Backboard -->
+  <rect x="38" y="10" width="20" height="16" rx="4" fill="#FF7A00"/>
+  <rect x="43" y="14" width="10" height="8" rx="2.5" fill="#FFB36B" opacity="0.95"/>
+  <!-- Hoop ring (donut) -->
+  <path fill="#FFB36B" fill-rule="evenodd" d="
+    M 48 28
+    m -6 0
+    a 6 6 0 1 0 12 0
+    a 6 6 0 1 0 -12 0
+    M 48 28
+    m -3.4 0
+    a 3.4 3.4 0 1 0 6.8 0
+    a 3.4 3.4 0 1 0 -6.8 0
+  "/>
+  <!-- Net -->
+  <path fill="#FFB36B" fill-rule="evenodd" d="
+    M 42.5 31.5 L 53.5 31.5 L 51.3 44.5 L 44.7 44.5 Z
+    M 45.2 33.5 H 46.8 V 42.8 H 45.2 Z
+    M 48.2 33.5 H 49.8 V 42.8 H 48.2 Z
+    M 51.2 33.5 H 52.8 V 42.8 H 51.2 Z
+  "/>
+</g>
+
+</svg>

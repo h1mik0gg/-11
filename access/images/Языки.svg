@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Languages (English EN)">
+  
+<g>
+  <!-- Book behind -->
+  <path fill="#FFB36B" opacity="0.95" d="
+    M 12 18
+    C 12 15, 14 13, 17 13
+    H 28
+    C 31 13, 33 15, 33 18
+    V 49
+    C 28 47, 22 47, 17 49
+    C 14 50, 12 50, 12 47 Z"/>
+  <path fill="#FFB36B" opacity="0.8" d="
+    M 33 18
+    C 33 15, 35 13, 38 13
+    H 49
+    C 52 13, 54 15, 54 18
+    V 47
+    C 54 50, 52 50, 49 49
+    C 44 47, 38 47, 33 49 Z"/>
+  <!-- Speech bubble -->
+  <path fill="#FF7A00" d="
+    M 14 22
+    C 14 18.7, 16.7 16, 20 16
+    H 44
+    C 47.3 16, 50 18.7, 50 22
+    V 36
+    C 50 39.3, 47.3 42, 44 42
+    H 30
+    L 23 48
+    C 22.3 48.6, 21.2 48.1, 21.2 47.2
+    V 42
+    H 20
+    C 16.7 42, 14 39.3, 14 36 Z"/>
+  <!-- EN letters (geometric) -->
+  <!-- E -->
+  <rect x="20" y="22" width="4" height="14" rx="2" fill="#FFB36B" opacity="0.95"/>
+  <rect x="20" y="22" width="10" height="4" rx="2" fill="#FFB36B" opacity="0.95"/>
+  <rect x="20" y="28" width="8" height="4" rx="2" fill="#FFB36B" opacity="0.95"/>
+  <rect x="20" y="32" width="10" height="4" rx="2" fill="#FFB36B" opacity="0.95"/>
+  <!-- N -->
+  <rect x="33" y="22" width="4" height="14" rx="2" fill="#FFB36B" opacity="0.95"/>
+  <rect x="41" y="22" width="4" height="14" rx="2" fill="#FFB36B" opacity="0.95"/>
+  <rect x="35" y="22" width="4" height="16" rx="2" fill="#FFB36B" opacity="0.95" transform="rotate(-25 37 30)"/>
+</g>
+
+</svg>

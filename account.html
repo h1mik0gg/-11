@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личный кабинет">
+    <title>Личный кабинет - Школа №11</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Скрытые данные кружков (копия из club.html) -->
+    <div style="display: none;" id="clubs-data">
+        <div data-club-id="1" data-title="Робототехника" data-type="кружок" data-category="IT" data-age-min="10" data-age-max="16" data-class-min="5" data-class-max="11" data-short-desc="Изучение основ робототехники и конструирования роботов" data-desc="На занятиях ребята изучают основы робототехники, программирования микроконтроллеров, конструируют и программируют роботов. Участвуют в соревнованиях и олимпиадах по робототехнике. Развивают логическое мышление, навыки программирования и инженерные способности." data-teacher-name="Денисенко Светлана Владимировна" data-teacher-role="Учитель информатики" data-schedule='[{"day":"вторник","timeFrom":"15:00","timeTo":"16:30"},{"day":"четверг","timeFrom":"15:00","timeTo":"16:30"}]' data-room="Кабинет информатики №325" data-address="3 этаж" data-price-type="paid" data-price-value="2000" data-price-period="в месяц" data-tags='["Олимпиадная подготовка","Для новичков"]' data-image="access/images/Робототехника.jpg" data-seats-total="15" data-seats-left="8"></div>
+        <div data-club-id="2" data-title="Футбол" data-type="секция" data-category="спорт" data-age-min="7" data-age-max="14" data-class-min="1" data-class-max="8" data-short-desc="Тренировки по футболу для мальчиков и девочек" data-desc="Занятия футболом развивают координацию, выносливость, командный дух. Тренировки проходят на школьном стадионе и в спортивном зале. Участие в школьных и городских соревнованиях. Подходит для начинающих и продолжающих." data-teacher-name="Даньшина Татьяна Николаевна" data-teacher-role="Учитель физкультуры" data-schedule='[{"day":"понедельник","timeFrom":"16:00","timeTo":"17:30"},{"day":"среда","timeFrom":"16:00","timeTo":"17:30"},{"day":"пятница","timeFrom":"16:00","timeTo":"17:30"}]' data-room="Спортивный зал" data-address="1 этаж" data-price-type="free" data-tags='["Для новичков"]' data-image="access/images/Футбол.webp" data-seats-total="20" data-seats-left="5"></div>
+        <div data-club-id="3" data-title="Хореография" data-type="кружок" data-category="творчество" data-age-min="6" data-age-max="12" data-class-min="1" data-class-max="6" data-short-desc="Классическая и современная хореография для детей" data-desc="Развитие пластики, чувства ритма, координации движений. Изучение основ классического и современного танца. Участие в школьных концертах и конкурсах. Формирование правильной осанки и грации." data-teacher-name="Сидорова Мария Сергеевна" data-teacher-role="Педагог дополнительного образования" data-schedule='[{"day":"вторник","timeFrom":"14:00","timeTo":"15:30"},{"day":"четверг","timeFrom":"14:00","timeTo":"15:30"}]' data-room="Актовый зал" data-address="1 этаж" data-price-type="paid" data-price-value="1500" data-price-period="в месяц" data-tags='["Для новичков"]' data-image="access/images/Хореография.jpg" data-seats-total="12" data-seats-left="12"></div>
+        <div data-club-id="4" data-title="Английский язык" data-type="кружок" data-category="языки" data-age-min="8" data-age-max="15" data-class-min="2" data-class-max="9" data-short-desc="Углубленное изучение английского языка" data-desc="Развитие разговорных навыков, грамматики, чтения и письма. Подготовка к олимпиадам и экзаменам. Интерактивные занятия с использованием современных методик. Практика общения с носителями языка." data-teacher-name="Фомина Елена Николаевна" data-teacher-role="Учитель английского языка" data-schedule='[{"day":"понедельник","timeFrom":"15:30","timeTo":"17:00"},{"day":"среда","timeFrom":"15:30","timeTo":"17:00"}]' data-room="Кабинет английского №212" data-address="2 этаж" data-price-type="paid" data-price-value="1800" data-price-period="в месяц" data-tags='["Олимпиадная подготовка"]' data-image="access/images/Вокал.jpg" data-seats-total="10" data-seats-left="3"></div>
+        <div data-club-id="5" data-title="Шахматы" data-type="кружок" data-category="наука" data-age-min="7" data-age-max="17" data-class-min="1" data-class-max="11" data-short-desc="Обучение игре в шахматы для начинающих и продвинутых" data-desc="Изучение правил, тактики и стратегии шахмат. Решение задач, участие в турнирах. Развитие логического мышления и концентрации внимания. Подготовка к соревнованиям различного уровня." data-teacher-name="Смирнов Алексей Дмитриевич" data-teacher-role="Тренер по шахматам" data-schedule='[{"day":"вторник","timeFrom":"14:30","timeTo":"16:00"},{"day":"пятница","timeFrom":"14:30","timeTo":"16:00"}]' data-room="Кабинет №218" data-address="2 этаж" data-price-type="free" data-tags='["Олимпиадная подготовка","Для новичков"]' data-image="access/images/Шахматы.jpg" data-seats-total="16" data-seats-left="0"></div>
+        <div data-club-id="6" data-title="Вокал" data-type="кружок" data-category="музыка" data-age-min="8" data-age-max="16" data-class-min="2" data-class-max="10" data-short-desc="Обучение вокалу и сценическому мастерству" data-desc="Развитие голоса, слуха, музыкального вкуса. Работа над дыханием, дикцией, артистизмом. Участие в концертах и конкурсах. Индивидуальный подход к каждому ученику." data-teacher-name="Волкова Елена Петровна" data-teacher-role="Педагог по вокалу" data-schedule='[{"day":"понедельник","timeFrom":"16:00","timeTo":"17:30"},{"day":"четверг","timeFrom":"16:00","timeTo":"17:30"}]' data-room="Музыкальный класс №220" data-address="2 этаж" data-price-type="paid" data-price-value="2200" data-price-period="в месяц" data-tags='["Для новичков"]' data-image="access/images/Вокал.jpg" data-seats-total="8" data-seats-left="2"></div>
+        <div data-club-id="7" data-title="Баскетбол" data-type="секция" data-category="спорт" data-age-min="10" data-age-max="17" data-class-min="4" data-class-max="11" data-short-desc="Тренировки по баскетболу для развития физической формы и командной игры" data-desc="Занятия баскетболом развивают скорость, ловкость, координацию и командный дух. Тренировки включают работу с мячом, броски, дриблинг, тактические упражнения. Участие в школьных и городских соревнованиях. Подходит для начинающих и продолжающих игроков." data-teacher-name="Даньшина Татьяна Николаевна" data-teacher-role="Учитель физкультуры" data-schedule='[{"day":"понедельник","timeFrom":"16:30","timeTo":"18:00"},{"day":"среда","timeFrom":"16:30","timeTo":"18:00"},{"day":"пятница","timeFrom":"16:30","timeTo":"18:00"}]' data-room="Спортивный зал" data-address="1 этаж" data-price-type="free" data-tags='["Для новичков"]' data-image="access/images/Баскетбол.jpg" data-seats-total="18" data-seats-left="7"></div>
+        <div data-club-id="8" data-title="Рисование" data-type="кружок" data-category="творчество" data-age-min="7" data-age-max="14" data-class-min="1" data-class-max="8" data-short-desc="Обучение основам живописи, рисунка и композиции" data-desc="Развитие художественных навыков, творческого мышления и эстетического вкуса. Изучение различных техник рисования: акварель, гуашь, карандаш, пастель. Работа с натурой, пейзажами, натюрмортами. Участие в выставках и конкурсах детского творчества." data-teacher-name="Орлова Светлана Викторовна" data-teacher-role="Педагог по изобразительному искусству" data-schedule='[{"day":"вторник","timeFrom":"15:00","timeTo":"16:30"},{"day":"четверг","timeFrom":"15:00","timeTo":"16:30"}]' data-room="Кабинет изобразительного искусства №115" data-address="1 этаж" data-price-type="paid" data-price-value="1700" data-price-period="в месяц" data-tags='["Для новичков"]' data-image="access/images/Рисование.webp" data-seats-total="14" data-seats-left="6"></div>
+        <div data-club-id="9" data-title="Программирование" data-type="кружок" data-category="IT" data-age-min="12" data-age-max="17" data-class-min="6" data-class-max="11" data-short-desc="Изучение языков программирования и разработка собственных проектов" data-desc="Освоение основ программирования на популярных языках (Python, JavaScript, C++). Разработка веб-приложений, игр, алгоритмов. Изучение структур данных, объектно-ориентированного программирования. Участие в олимпиадах по информатике и хакатонах. Подготовка к поступлению в IT-вузы." data-teacher-name="Денисенко Светлана Владимировна" data-teacher-role="Учитель информатики" data-schedule='[{"day":"понедельник","timeFrom":"15:30","timeTo":"17:00"},{"day":"среда","timeFrom":"15:30","timeTo":"17:00"},{"day":"пятница","timeFrom":"15:30","timeTo":"17:00"}]' data-room="Кабинет информатики №325" data-address="3 этаж" data-price-type="paid" data-price-value="2500" data-price-period="в месяц" data-tags='["Олимпиадная подготовка"]' data-image="access/images/Программирование.jpg" data-seats-total="12" data-seats-left="4"></div>
+    </div>
+
+    <div id="header-container"></div>
+
+    <nav class="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li>Личный кабинет</li>
+        </ol>
+    </nav>
+
+    <main>
+        <div class="container" style="max-width: 1000px;">
+            <h1 style="margin-bottom: 32px;">Личный кабинет</h1>
+
+            <!-- Проверка авторизации -->
+            <div id="auth-required" style="display: none;">
+                <div class="card" style="text-align: center; padding: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px;">Для доступа к личному кабинету необходимо войти</p>
+                    <a href="index.html?auth=login" class="btn btn-primary">Войти</a>
+                </div>
+            </div>
+
+            <!-- Контент ЛК -->
+            <div id="account-content" style="display: none;">
+                <!-- Табы -->
+                <div class="account-tabs">
+                    <button class="account-tab active" data-tab="profile">Профиль</button>
+                    <button class="account-tab" data-tab="requests">Мои заявки</button>
+                    <button class="account-tab" data-tab="orders">Мои заказы</button>
+                    <button class="account-tab" data-tab="favorites">Избранное</button>
+                </div>
+
+                <!-- Профиль -->
+                <div class="account-content active" id="tab-profile">
+                    <div class="card">
+                        <h2 style="margin-bottom: 24px;">Профиль</h2>
+                        <form id="profile-form" style="display: grid; gap: 16px; max-width: 500px;">
+                            <div>
+                                <label class="label label-required">ФИО</label>
+                                <input type="text" class="input" id="profile-name" required>
+                            </div>
+                            <div>
+                                <label class="label label-required">Телефон</label>
+                                <input type="tel" class="input" id="profile-phone" required>
+                            </div>
+                            <div>
+                                <label class="label label-required">Email</label>
+                                <input type="email" class="input" id="profile-email" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Заявки -->
+                <div class="account-content" id="tab-requests">
+                    <div id="requests-container">
+                        <div class="loading">Загрузка...</div>
+                    </div>
+                </div>
+
+                <!-- Заказы -->
+                <div class="account-content" id="tab-orders">
+                    <div id="orders-container">
+                        <div class="loading">Загрузка...</div>
+                    </div>
+                </div>
+
+                <!-- Избранное -->
+                <div class="account-content" id="tab-favorites">
+                    <div id="favorites-container">
+                        <div class="loading">Загрузка...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="auth-modal-container"></div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/pages/account.js"></script>
+</body>
+</html>
+

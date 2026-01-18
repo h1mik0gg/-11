@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Creativity (dance + painting)">
+  
+<g>
+  <!-- Dancer -->
+  <circle cx="22" cy="16" r="5" fill="#FF7A00"/>
+  <path fill="#FF7A00" d="
+    M 20 22
+    C 18 27, 16 30, 14 33
+    C 13 35, 14 37, 16 38
+    C 19 39, 23 38, 26 35
+    C 28 33, 30 30, 33 28
+    C 35 27, 36 25, 35 23
+    C 34 21, 31 21, 29 22
+    C 27 23, 25 25, 23 26
+    C 22 25, 21 23, 20 22 Z"/>
+  <path fill="#FF7A00" d="
+    M 26 34
+    C 24 38, 22 43, 19 47
+    C 18 49, 19 51, 21 52
+    C 23 53, 25 52, 26 50
+    C 28 46, 31 42, 33 38
+    C 31 37, 28 36, 26 34 Z"/>
+  <path fill="#FF7A00" d="
+    M 23 28
+    C 21 31, 19 35, 17 37
+    C 16 39, 16 41, 18 42
+    C 20 44, 22 43, 24 41
+    C 26 38, 28 35, 30 32
+    C 28 31, 25 30, 23 28 Z"/>
+  <!-- Paint brush (diagonal) -->
+  <g transform="rotate(-38 44 44)">
+    <rect x="41" y="28" width="6" height="28" rx="3" fill="#FFB36B" opacity="0.95"/>
+    <path d="M 41 28 H 47 V 24 C 47 22 45.5 21 44 21 C 42.5 21 41 22 41 24 Z" fill="#FFB36B"/>
+    <path d="M 41 56 H 47 L 45.5 60 H 42.5 Z" fill="#FFB36B" opacity="0.9"/>
+  </g>
+  <!-- Small paint splash -->
+  <circle cx="50" cy="16" r="3" fill="#FFB36B" opacity="0.95"/>
+  <circle cx="54" cy="20" r="2" fill="#FFB36B" opacity="0.9"/>
+  <circle cx="46" cy="20" r="2" fill="#FFB36B" opacity="0.9"/>
+</g>
+
+</svg>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог кружков и секций школы №11. Выбирайте занятия по интересам, возрасту и расписанию.">
+    <title>Кружки и секции школы №11</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Hero блок с параллаксом -->
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Кружки и секции школы №11</h1>
+                <p class="hero-subtitle">Выбирайте занятия по интересам, возрасту и расписанию</p>
+                
+                <!-- Поиск -->
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="home-search" 
+                        class="search-input" 
+                        placeholder="Например: футбол, шахматы, вокал…"
+                    >
+                    <button class="btn btn-primary" id="home-search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        Найти
+                    </button>
+                </div>
+
+                <a href="catalog.html" class="btn btn-secondary">Перейти в каталог</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Популярные направления -->
+            <section class="section">
+                <h2 class="section-title">Популярные направления</h2>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Заполняется через JS -->
+                </div>
+            </section>
+
+            <!-- Топ кружков -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Топ кружков</h2>
+                    <a href="catalog.html" class="link-accent">Все кружки →</a>
+                </div>
+                <div class="clubs-grid" id="top-clubs">
+                    <div class="card card-hover" onclick="window.location.href='club.html?id=9'">
+                        <div style="aspect-ratio: 16/9; background: var(--bg-primary); border-radius: var(--radius-card); margin-bottom: 16px; overflow: hidden;">
+                            <img src="access/images/Программирование.jpg" alt="Программирование" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <h3 style="margin-bottom: 8px;">Программирование</h3>
+                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Изучение языков программирования и разработка собственных проектов
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                            <span class="badge badge-warning">Платно</span>
+                            <span class="badge badge-accent">Есть места</span>
+                        </div>
+                        <div style="display: flex; gap: 16px; font-size: 12px; color: var(--text-muted);">
+                            <span>12-17 лет</span>
+                            <span>понедельник, среда, пятница</span>
+                        </div>
+                    </div>
+                    <div class="card card-hover" onclick="window.location.href='club.html?id=5'">
+                        <div style="aspect-ratio: 16/9; background: var(--bg-primary); border-radius: var(--radius-card); margin-bottom: 16px; overflow: hidden;">
+                            <img src="access/images/Шахматы.jpg" alt="Шахматы" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <h3 style="margin-bottom: 8px;">Шахматы</h3>
+                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Обучение игре в шахматы для начинающих и продвинутых
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                            <span class="badge badge-success">Бесплатно</span>
+                            <span class="badge badge-error">Группа набрана</span>
+                        </div>
+                        <div style="display: flex; gap: 16px; font-size: 12px; color: var(--text-muted);">
+                            <span>7-17 лет</span>
+                            <span>вторник, пятница</span>
+                        </div>
+                    </div>
+                    <div class="card card-hover" onclick="window.location.href='club.html?id=6'">
+                        <div style="aspect-ratio: 16/9; background: var(--bg-primary); border-radius: var(--radius-card); margin-bottom: 16px; overflow: hidden;">
+                            <img src="access/images/Вокал.jpg" alt="Вокал" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <h3 style="margin-bottom: 8px;">Вокал</h3>
+                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Обучение вокалу и сценическому мастерству
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                            <span class="badge badge-warning">Платно</span>
+                            <span class="badge badge-accent">Есть места</span>
+                        </div>
+                        <div style="display: flex; gap: 16px; font-size: 12px; color: var(--text-muted);">
+                            <span>8-16 лет</span>
+                            <span>понедельник, четверг</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Как записаться -->
+            <section class="section">
+                <h2 class="section-title text-center">Как записаться</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">1</div>
+                        <h3>Выберите кружок в каталоге</h3>
+                        <p>Найдите подходящий кружок или секцию по интересам, возрасту и расписанию</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">2</div>
+                        <h3>Заполните заявку онлайн</h3>
+                        <p>Укажите контактные данные и информацию о ребёнке</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">3</div>
+                        <h3>Получите подтверждение</h3>
+                        <p>Мы свяжемся с вами через Telegram бот школы</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ближайшие события -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Ближайшие события</h2>
+                    <a href="news.html" class="link-accent">Все новости →</a>
+                </div>
+                <div class="news-grid" id="home-news">
+                    <div class="card card-hover" onclick="window.location.href='news.html#6'">
+                        <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                            <img src="access/images/Обновление информации о кружках.png" alt="Обновление информации о кружках" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                        </div>
+                        <span class="badge badge-accent" style="margin-bottom: 12px;">объявление</span>
+                        <h3 style="margin-bottom: 8px;">Обновление информации о кружках</h3>
+                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Обновлена информация о расписании и стоимости занятий в кружках баскетбола, рисования и программирования. Теперь все занятия доступны для записи через личный кабинет на сайте.
+                        </p>
+                        <span style="font-size: 12px; color: var(--text-muted);">05.11.2025</span>
+                    </div>
+                    <div class="card card-hover" onclick="window.location.href='news.html#5'">
+                        <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                            <img src="access/images/Выставка работ кружка рисования.png" alt="Выставка работ кружка рисования" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                        </div>
+                        <span class="badge badge-accent" style="margin-bottom: 12px;">событие</span>
+                        <h3 style="margin-bottom: 8px;">Выставка работ кружка рисования</h3>
+                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            30 октября в актовом зале школы состоится выставка творческих работ учащихся кружка рисования. Приглашаем всех желающих посетить выставку с 14:00 до 17:00. Вход свободный.
+                        </p>
+                        <span style="font-size: 12px; color: var(--text-muted);">20.10.2025</span>
+                    </div>
+                    <div class="card card-hover" onclick="window.location.href='news.html#4'">
+                        <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                            <img src="access/images/Открыт набор в кружок программирования.png" alt="Открыт набор в кружок программирования" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                        </div>
+                        <span class="badge badge-accent" style="margin-bottom: 12px;">набор открыт</span>
+                        <h3 style="margin-bottom: 8px;">Открыт набор в кружок программирования</h3>
+                        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                            Приглашаем учащихся 6-11 классов в новый кружок программирования! Изучаем Python, JavaScript и C++. Начало занятий с 15 октября. Запись открыта до 10 октября. Количество мест ограничено.
+                        </p>
+                        <span style="font-size: 12px; color: var(--text-muted);">12.10.2025</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="auth-modal-container"></div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Новости и объявления школы №11">
+    <title>Новости - Школа №11</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <nav class="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li>Новости</li>
+        </ol>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1 style="margin-bottom: 32px;">Новости и объявления</h1>
+
+            <!-- Фильтры -->
+            <div style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;">
+                <button class="tab" data-filter="all">Все</button>
+                <button class="tab" data-filter="объявление">Объявления</button>
+                <button class="tab" data-filter="событие">События</button>
+                <button class="tab" data-filter="набор открыт">Набор открыт</button>
+            </div>
+
+            <!-- Список новостей -->
+            <div id="news-container" class="news-grid">
+                <div class="card card-hover" data-news-id="1" data-type="набор открыт" onclick="openNewsDetail('1')">
+                    <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="access/images/Открыт набор в кружок робототехники.png" alt="Открыт набор в кружок робототехники" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                    </div>
+                    <span class="badge badge-accent" style="margin-bottom: 12px;">набор открыт</span>
+                    <h3 style="margin-bottom: 8px;">Открыт набор в кружок робототехники</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        Приглашаем учащихся 5-11 классов в кружок робототехники. Начало занятий с 1 октября. Запись открыта до 25 сентября.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 12px; color: var(--text-muted);">15.09.2025</span>
+                        <button class="btn btn-ghost" style="padding: 4px 8px;" onclick="event.stopPropagation(); shareNews('1')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="card card-hover" data-news-id="2" data-type="событие" onclick="openNewsDetail('2')">
+                    <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="access/images/Школьный турнир по шахматам.png" alt="Школьный турнир по шахматам" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                    </div>
+                    <span class="badge badge-accent" style="margin-bottom: 12px;">событие</span>
+                    <h3 style="margin-bottom: 8px;">Школьный турнир по шахматам</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        25 октября состоится школьный турнир по шахматам. Регистрация до 20 октября. Приглашаем всех желающих принять участие.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 12px; color: var(--text-muted);">08.10.2025</span>
+                        <button class="btn btn-ghost" style="padding: 4px 8px;" onclick="event.stopPropagation(); shareNews('2')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="card card-hover" data-news-id="3" data-type="объявление" onclick="openNewsDetail('3')">
+                    <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="access/images/Важная информация о расписании.png" alt="Важная информация о расписании" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                    </div>
+                    <span class="badge badge-accent" style="margin-bottom: 12px;">объявление</span>
+                    <h3 style="margin-bottom: 8px;">Важная информация о расписании</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        Обратите внимание: с 1 октября изменено расписание занятий в некоторых кружках. Пожалуйста, проверьте актуальное расписание на странице кружка.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 12px; color: var(--text-muted);">22.09.2025</span>
+                        <button class="btn btn-ghost" style="padding: 4px 8px;" onclick="event.stopPropagation(); shareNews('3')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="card card-hover" data-news-id="4" data-type="набор открыт" onclick="openNewsDetail('4')">
+                    <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="access/images/Открыт набор в кружок программирования.png" alt="Открыт набор в кружок программирования" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                    </div>
+                    <span class="badge badge-accent" style="margin-bottom: 12px;">набор открыт</span>
+                    <h3 style="margin-bottom: 8px;">Открыт набор в кружок программирования</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        Приглашаем учащихся 6-11 классов в новый кружок программирования! Изучаем Python, JavaScript и C++. Начало занятий с 15 октября. Запись открыта до 10 октября. Количество мест ограничено.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 12px; color: var(--text-muted);">12.10.2025</span>
+                        <button class="btn btn-ghost" style="padding: 4px 8px;" onclick="event.stopPropagation(); shareNews('4')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="card card-hover" data-news-id="5" data-type="событие" onclick="openNewsDetail('5')">
+                    <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="access/images/Выставка работ кружка рисования.png" alt="Выставка работ кружка рисования" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                    </div>
+                    <span class="badge badge-accent" style="margin-bottom: 12px;">событие</span>
+                    <h3 style="margin-bottom: 8px;">Выставка работ кружка рисования</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        30 октября в актовом зале школы состоится выставка творческих работ учащихся кружка рисования. Приглашаем всех желающих посетить выставку с 14:00 до 17:00. Вход свободный.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 12px; color: var(--text-muted);">20.10.2025</span>
+                        <button class="btn btn-ghost" style="padding: 4px 8px;" onclick="event.stopPropagation(); shareNews('5')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="card card-hover" data-news-id="6" data-type="объявление" onclick="openNewsDetail('6')">
+                    <div style="background: var(--bg-primary); border-radius: var(--radius-card) var(--radius-card) 0 0; margin-top: -24px; margin-left: -24px; margin-right: -24px; margin-bottom: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="access/images/Обновление информации о кружках.png" alt="Обновление информации о кружках" style="width: 100%; height: auto; display: block; object-fit: contain;">
+                    </div>
+                    <span class="badge badge-accent" style="margin-bottom: 12px;">объявление</span>
+                    <h3 style="margin-bottom: 8px;">Обновление информации о кружках</h3>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                        Обновлена информация о расписании и стоимости занятий в кружках баскетбола, рисования и программирования. Теперь все занятия доступны для записи через личный кабинет на сайте.
+                    </p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 12px; color: var(--text-muted);">05.11.2025</span>
+                        <button class="btn btn-ghost" style="padding: 4px 8px;" onclick="event.stopPropagation(); shareNews('6')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="auth-modal-container"></div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/pages/news.js"></script>
+</body>
+</html>
+
